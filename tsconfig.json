@@ -1,5 +1,16 @@
 {
     "compilerOptions": {
+        "target": "esnext",
+        "module": "ES2015",
+        "strict": true,
+        "noImplicitAny": false,
+        "baseUrl": "./",
+        "outDir": "./dist",
+        "esModuleInterop": true,
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "lib": ["es2021", "dom"],
         "jsx": "react-jsx",
     },
+    "include": ["src"]
 }

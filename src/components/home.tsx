@@ -118,7 +118,7 @@ const Icons = {
     //     fill="#ffba00"
     //   />
       // </svg>
-    <img src="../../public/images/psd.png" alt="" />
+    <img src="https://book.funxdata.com/public/applogo/psd.png" alt="" />
   ),
   whatsapp: () => (
     <svg

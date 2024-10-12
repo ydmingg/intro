@@ -1,7 +1,17 @@
-{
+{   
+    "files": [],
+    "references": [
+        { "path": "./tsconfig.app.json" },
+        { "path": "./tsconfig.node.json" }
+    ],
     "compilerOptions": {
+        /* 基础配置 */
         "target": "esnext",
         "module": "ES2015",
+        "removeComments": false,
+        "declaration": false,
+        "sourceMap": false,
+        /* 强类型检查配置 */
         "strict": true,
         "noImplicitAny": false,
         "baseUrl": "./",
@@ -9,8 +19,9 @@
         "esModuleInterop": true,
         "moduleResolution": "node",
         "resolveJsonModule": true,
-        "lib": ["es2021", "dom"],
-        "jsx": "react-jsx",
-    },
-    "include": ["src"]
+        "paths": {
+            "@/*": ["src/*"]
+        },
+        "lib": ["ES2021", "dom"],
+    }
 }

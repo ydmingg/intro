@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import { Button } from "@/components/ui/button";
+import { OrbitingCirclesDemo } from "@/components/home"
 
 function App() {
     const [count, setCount] = useState(0)
@@ -6,8 +8,12 @@ function App() {
         <>
             <div className="box-img">
                 <div className="">{count}</div>
-                <button onClick={()=>setCount(count => count+1) }>增加数量</button>
             </div>
+            <Button
+                className='mb-12'
+                onClick={() => setCount(count => count + 1)}
+            >增加数量</Button>
+            <OrbitingCirclesDemo></OrbitingCirclesDemo>
         </>
     )
 }

@@ -80,41 +80,70 @@ button:focus-visible {
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
-  }
-  
-  .logo {
+    
+}
+
+
+.logo {
     height: 6em;
     padding: 1.5em;
     will-change: filter;
     transition: filter 300ms;
-  }
-  .logo:hover {
+}
+.logo:hover {
     filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.react:hover {
+}
+.logo.react:hover {
     filter: drop-shadow(0 0 2em #61dafbaa);
-  }
-  
-  @keyframes logo-spin {
+}
+
+@keyframes logo-spin {
     from {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
     to {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  @media (prefers-reduced-motion: no-preference) {
+}
+
+@media (prefers-reduced-motion: no-preference) {
     a:nth-of-type(2) .logo {
-      animation: logo-spin infinite 20s linear;
+        animation: logo-spin infinite 20s linear;
     }
-  }
-  
-  .card {
+}
+
+.card {
     padding: 2em;
-  }
-  
-  .read-the-docs {
+}
+
+.read-the-docs {
     color: #888;
-  }
+}
   
+
+/* Framer-motion */
+body{
+    --black: #000000;
+    --ash-black: #222;
+    --white: #fafafa;
+    --sky: #00ccff;
+    --green: #22dddd;
+    --blue: #1300ff;
+    --dusk: #6600ff;
+    --purple: #9900ff;
+    --pink: #ff0066;
+    --red: #fe0222;
+    --orange: #fd7702;
+    --yellow: #ffbb00;
+  
+    --background: var(--white);
+    --accent: var(--blue);
+    
+    background-image: radial-gradient(circle farthest-corner at 100% 50%, #d1d3d6, #fcfcfd);
+}
+.box-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--accent);
+}

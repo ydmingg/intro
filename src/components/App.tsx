@@ -1,6 +1,7 @@
 // import { useState } from 'react'
-// import { Button } from "@/components/ui/button";
-import { OrbitingCirclesDemo } from "@/components/home"
+// import { OrbitingCirclesDemo } from "@/components/home"
+import { Rect } from "@/components/rect"
+import { OtherBg } from "@/components/other-bg"
 
 function App() {
     // const [count, setCount] = useState(0)
@@ -8,12 +9,29 @@ function App() {
         <>
             {/* <div className="box-img">
                 <div className="">{count}</div>
+            </div>*/}
+            {/* <OrbitingCirclesDemo></OrbitingCirclesDemo> */}
+            <Rect></Rect>
+            <div className="">
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
+                <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
             </div>
-            <Button
-                className='mb-12'
-                onClick={() => setCount(count => count + 1)}
-            >增加数量</Button> */}
-            <OrbitingCirclesDemo></OrbitingCirclesDemo>
+            <OtherBg></OtherBg>
         </>
     )
 }

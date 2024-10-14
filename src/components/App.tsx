@@ -12,7 +12,7 @@ function App() {
             </div>*/}
             {/* <OrbitingCirclesDemo></OrbitingCirclesDemo> */}
             <Rect></Rect>
-            <div className="">
+            <div className="relative z-[1]">
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>

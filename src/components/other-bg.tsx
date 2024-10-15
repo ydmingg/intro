@@ -35,14 +35,8 @@ export function OtherBg() {
 
                 // 处理小球水平移动轨迹
                 scrollLeft = 0
-                // if (rectPosition) { 
-                //     console.log(rectPosition);
-                    
-                // }
-                console.log(windowOffsetWidth, rectPosition.right);
+                // console.log(windowOffsetWidth, rectPosition.right);
                 
-                
-
 
                 const animate = () => {
                     setPosition(prevPos => {
@@ -73,7 +67,7 @@ export function OtherBg() {
 
     return (
         <>
-            <div ref={oMyBg} className="absolute top-32 right-32 z-0 bg-black" style={{
+            <div ref={oMyBg} className="absolute top-32 right-32 z-0" style={{
                 transition: 'all 0.5s ease',
                 transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
             }}>

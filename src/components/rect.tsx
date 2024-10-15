@@ -7,7 +7,7 @@ export function Rect() {
     return (
         <>
             <motion.div
-                className="box-img"
+                className="box-img relative z-[1]"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 1.1 }}
                 drag="x"

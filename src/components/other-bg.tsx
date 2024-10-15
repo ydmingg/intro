@@ -5,30 +5,50 @@ export function OtherBg() {
     const [position, setPosition] = useState({ x: 0, y: 0 });
     const oMyBg = useRef<HTMLDivElement>(null);
     const animationRef = useRef<number>();
+    let idx = 0
 
     useEffect(() => {
         const handleScroll = () => {
             if (oMyBg.current) {
-                const { scrollTop, clientWidth, scrollHeight, clientHeight } = document.documentElement;
-                const rect = oMyBg.current.getBoundingClientRect();
-                const ballWidth = rect.width;
-                const maxX = clientWidth - ballWidth - 64; // 64 is 2 * margin (32px on each side)
+                // 获取窗口的位置信息
+                const { windowOffsetWidth, windowCrollTop, } = {
+                    "windowOffsetWidth": document.documentElement.offsetWidth,
+                    "windowCrollTop": document.documentElement.scrollTop,
+                }
+                // 初始化小球的位置信息
+                const { oMyBgRight, oMyBgTop} = {
+                    "oMyBgRight": windowOffsetWidth - parseInt(getComputedStyle(oMyBg.current).right, 10),
+                    "oMyBgTop": parseInt(getComputedStyle(oMyBg.current).top, 10)
+                }
+                // 获取小球的位置信息
+                const rectPosition = oMyBg.current.getBoundingClientRect();
+          
+                // 初始化小球变化的位置
+                let { scrollTop, scrollLeft} = {
+                    "scrollTop": windowCrollTop,
+                    "scrollLeft": windowCrollTop,
+                }
 
-                // Calculate horizontal movement based on scroll amount
-                const scrollPercentage = scrollTop / (scrollHeight - clientHeight);
-                const targetX = Math.max(0, Math.min(maxX * scrollPercentage, maxX));
-                const targetY = scrollTop * 0.8;
+                // 判断浏览器滚动方向
+                idx = windowCrollTop > idx ? windowCrollTop + oMyBgTop : windowCrollTop;
+                idx = scrollTop;
 
-                // Smooth animation
+                // 处理小球水平移动轨迹
+                scrollLeft = 0
+                // if (rectPosition) { 
+                //     console.log(rectPosition);
+                    
+                // }
+                console.log(windowOffsetWidth, rectPosition.right);
+                
+                
+
+
                 const animate = () => {
                     setPosition(prevPos => {
-                        const newX = prevPos.x + (targetX - prevPos.x) * 0.1;
-                        const newY = prevPos.y + (targetY - prevPos.y) * 0.1;
-
-                        if (Math.abs(targetX - newX) < 0.1 && Math.abs(targetY - newY) < 0.1) {
-                            return { x: targetX, y: targetY };
-                        }
-
+                        const newX = prevPos.x + (scrollLeft - prevPos.x) 
+                        const newY = prevPos.y + (scrollTop - prevPos.y) 
+                        
                         animationRef.current = requestAnimationFrame(animate);
                         return { x: newX, y: newY };
                     });

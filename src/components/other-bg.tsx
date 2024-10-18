@@ -7,24 +7,21 @@ export function OtherBg() {
 
     useEffect(() => {
         if (oMyBg.current) { 
-            const elementHeight = oMyBg.current.offsetHeight;
-            const elementWidth = oMyBg.current.offsetWidth;
-    
-            window.addEventListener('scroll', () => {
-                // 获取当前滚动的垂直距离
-                const scrollY = window.scrollY;
-    
-                // 计算元素的新位置
-                let newTranslateY = scrollY;
-                let newTranslateX = (window.innerWidth - elementWidth) * Math.random(); // 随机水平位置
-    
-                // 确保元素不超出可视范围
-                if (newTranslateY + elementHeight > window.innerHeight) {
-                    newTranslateY = window.innerHeight - elementHeight;
-                }
-    
-                oMyBg.current!.style.transform = `translate(${newTranslateX}px, ${newTranslateY}px)`;
-            });
+            const rect = oMyBg.current.getBoundingClientRect(); // 获取元素相对于视口的位置信息
+            const scrollX = window.scrollX;
+            const scrollY = window.scrollY;
+
+            // 计算新的位置
+            let newX = scrollX + (window.innerWidth - rect.width) / 2;
+            let newY = scrollY + (window.innerHeight - rect.height) / 2;
+
+            // 确保元素不会超出视口边界
+            if (newX < 0) newX = 0;
+            if (newY < 0) newY = 0;
+            if (newX + rect.width > window.innerWidth) newX = window.innerWidth - rect.width;
+            if (newY + rect.height > window.innerHeight) newY = window.innerHeight - rect.height;
+
+            oMyBg.current.style.transform = `translate(${newX}px, ${newY}px)`;
         }
 
     }, []);

@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from 'react'
 
 export function OtherBg() { 
     // 设置滚动鼠标时，图片修改transform的translate属性值
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    // const [position, setPosition] = useState({ x: 0, y: 0 });
     const oMyBg = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -26,8 +26,6 @@ export function OtherBg() {
 
     }, []);
     
-
-
     return (
         <>
             <div ref={oMyBg} className="absolute top-32 right-32 z-0" style={{

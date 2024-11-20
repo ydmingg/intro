@@ -7,13 +7,13 @@ import { Example } from "@/components/Example";
 function App() {
     const [count, setCount] = useState(0)
     return (
-        <>
+        <div className="overflow-hidden w-full">
             {/* <div className="box-img">
                 <div className="">{count}</div>
             </div>*/}
             {/* <OrbitingCirclesDemo></OrbitingCirclesDemo> */}
-            <Rect></Rect>
-            <Example key={count} />
+            {/* <Rect></Rect> */}
+            {/* <Example key={count} /> */}
             <div className="relative z-[1]">
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
@@ -34,7 +34,7 @@ function App() {
                 <p className="p-[40px] m-[40px]">sadfasdfsdf</p>
             </div>
             <OtherBg></OtherBg>
-        </>
+        </div>
     )
 }
 

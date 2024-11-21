@@ -2,11 +2,9 @@ import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="relative flex w-[500px] h-[500px] flex-col items-center justify-center rounded-lg bg-background">
-        <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-            开发中
-        </span>
-
+    <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
+          <div className="">asdfasdf</div>
+          
         {/* Inner Circles */}
         <OrbitingCircles
             className="size-[30px] border-none bg-transparent"
@@ -27,7 +25,7 @@ export function OrbitingCirclesDemo() {
 
         {/* Outer Circles (reverse) */}
         <OrbitingCircles
-            className="size-[150px] border-none bg-transparent"
+            className="size-[192px] border-none bg-transparent"
             radius={190}
             duration={20}
             reverse
@@ -43,7 +41,7 @@ export function OrbitingCirclesDemo() {
         >
             <Icons.gitHub />
         </OrbitingCircles>
-    </div>
+    </section>
   );
 }
 
@@ -118,7 +116,7 @@ const Icons = {
     //     fill="#ffba00"
     //   />
       // </svg>
-    <img src="https://book.funxdata.com/public/applogo/psd.png" alt="" />
+    <img src="https://book.funxdata.com/public/img/website/ydm.png" className="relative mr-16 mt-24 shadow-lg rounded-full" alt="" />
   ),
   whatsapp: () => (
     <svg

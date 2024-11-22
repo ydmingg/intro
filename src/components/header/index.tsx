@@ -58,7 +58,7 @@ export function Header() {
                         <a
                             target="_blank"
                             rel="noreferrer"
-                            href="https://github.com/nolly-studio/cult-ui">
+                            href="https://github.com/ydmingg">
                             <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0">
                                 <svg viewBox="0 0 438.549 438.549" className="h-4 w-4">
                                     <path
@@ -71,7 +71,7 @@ export function Header() {
                         <a
                             target="_blank"
                             rel="noreferrer"
-                            href="https://x.com/nolansym">
+                            href="">
                             <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0">
                                 <svg
                                     className="h-3 w-3 fill-current"

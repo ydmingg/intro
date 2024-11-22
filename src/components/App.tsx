@@ -6,6 +6,7 @@ function App() {
         <main className="new-main overflow-hidden w-full">
             <BgBall></BgBall>
             <OrbitingCirclesDemo></OrbitingCirclesDemo>
+            
         </main>
     )
 }

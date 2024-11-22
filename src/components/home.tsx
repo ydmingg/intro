@@ -2,7 +2,7 @@ import OrbitingCircles from "@/components/ui/orbiting-circles";
 
 export function OrbitingCirclesDemo() {
   return (
-    <div className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
+    <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
       {/* <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
         
       </span> */}
@@ -43,7 +43,7 @@ export function OrbitingCirclesDemo() {
       >
         <Icons.gitHub />
       </OrbitingCircles>
-    </div>
+    </section>
   );
 }
 

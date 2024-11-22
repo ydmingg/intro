@@ -1,13 +1,16 @@
-import { OrbitingCirclesDemo } from "@/components/home"
+import { Header } from "@/components/header"
 import { BgBall } from "@/components/decorate/bg-ball"
+import { Home } from "@/pages/home"
 
 function App() {
     return (
-        <main className="new-main overflow-hidden w-full">
+        <section className="intro overflow-hidden">
+            <Header></Header>
             <BgBall></BgBall>
-            <OrbitingCirclesDemo></OrbitingCirclesDemo>
-            
-        </main>
+            <main className="intro-main w-full">
+                <Home></Home>
+            </main>
+        </section>
     )
 }
 

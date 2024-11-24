@@ -7,6 +7,7 @@ export function BgBall() {
     const myRef = React.useRef<HTMLDivElement>(null);
     const [scrollHeight, setScrollHeight] = useState(0);
     const [newH, setNewH] = useState(0);
+    const img_white_circle = new URL('@/assets/images/white-circle.webp', import.meta.url).href;
 
     // 更新宽度为窗口宽度的 90%
     useEffect(() => {
@@ -63,7 +64,7 @@ export function BgBall() {
                 decoding="async"
                 data-nimg="1"
                 className="z-[1]"
-                src="/public/imgs/white-circle.webp"
+                src={ img_white_circle }
             />
         </animated.div>
     );

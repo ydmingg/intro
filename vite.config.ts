@@ -3,6 +3,24 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import { version } from './package.json';
 
+// 获取版本号
+const getVersion = version.replace(/\./g, "");
+
+// 自定义静态资源配置
+const getAssetFile = (assetInfo: any) => {
+    const name = Array.isArray(assetInfo.names) && assetInfo.names.length > 0 ? assetInfo.names[0] : "unknown";
+    const fileType = name.split(".").pop();
+  
+    if (/png|jpe?g|gif|svg|webp/.test(fileType)) {
+      return `assets/images/[name].[ext]`;
+    }
+    if (/css/.test(fileType)) {
+      return `assets/styles/[name]-${getVersion}.[ext]`;
+    }
+    return `assets/[name].[ext]`;
+};
+
+// 导出配置
 export default defineConfig({
     root: '', // 设置项目根目录
     base: './', // 设置公共基础路径
@@ -13,11 +31,10 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 "index": path.resolve(__dirname, 'index.html'),
-                // "intro": "src/main.tsx"
             },
             output: {
-                entryFileNames: `[name]${version.replaceAll('.', '')}.js`, // 输出文件名称
-                assetFileNames: `assets/[name]${version.replaceAll('.', '')}.[ext]`,
+                entryFileNames: `[name]-${getVersion}.js`,
+                assetFileNames: getAssetFile,
             },
 
         }

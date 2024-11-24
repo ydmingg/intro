@@ -30,7 +30,7 @@ export default defineConfig({
         minify: "esbuild", // 压缩代码
         rollupOptions: {
             input: {
-                "index": path.resolve(__dirname, 'index.html'),
+                "intro": path.resolve(__dirname, 'index.html'),
             },
             output: {
                 entryFileNames: `[name]-${getVersion}.js`,

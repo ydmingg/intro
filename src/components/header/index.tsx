@@ -1,7 +1,7 @@
 export function Header() { 
     return (
         <header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
-            <div className="flex h-14 max-w-screen-2xl items-center p-4">
+            <div className="flex h-14 items-center p-4">
                 <div className="mr-4 hidden md:flex ">
                     {/* <a className="mr-6 flex items-center space-x-2" href="/">
                         <svg

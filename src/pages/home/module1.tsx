@@ -26,16 +26,16 @@ export function OrbitingCirclesDemo() {
                                 className="text-xl font-bold text-neutral-600 dark:text-white">
                                 home
                             </CardItem>
-                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                            <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition">
                                 <a href="">89898989</a>
                             </div>
-                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                            <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition">
                                 <a href="">89898989</a>
                             </div>
-                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                            <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition">
                                 <a href="">89898989</a>
                             </div>
-                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                            <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition">
                                 <a href="">89898989</a>
                             </div>
                         </div>

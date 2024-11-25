@@ -1,61 +1,46 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
-import { CardBody, CardContainer, CardItem } from "../../components/ui/3d-card";
+import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
+import GradualSpacing from "@/components/ui/gradual-spacing";
 
 export function OrbitingCirclesDemo() {
 	return (
 		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
 			<CardContainer className="inter-var">
 				<CardBody className="p-8 relative bg-gradient-to-r from-gray-50 from-60% to-gray-200 rounded-3xl shadow-xl">
-                <CardItem
+					<CardItem
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
 						home
 					</CardItem>
-                    <CardItem
+					<CardItem
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
-                        this me
+						<h2 className="py-6 border-b-2 border-slate-700">
+                            <GradualSpacing className="inline-block" text='function' />
+						</h2>
 					</CardItem>
-                    
-					<CardItem
-						as="p"
-						translateZ="60"
-						className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-						Hover over this card to unleash the power of CSS
-						perspective
-                    </CardItem>
-                    <div className="">
-                    <CardItem
-                            as="p"
-                            translateZ="60"
-                            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                            Hover over this card to unleash the power of CSS
-                            perspective
-                        </CardItem>
-                        <CardItem
-                            as="p"
-                            translateZ="60"
-                            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                            Hover over this card to unleash the power of CSS
-                            perspective
-                        </CardItem>
-                        <CardItem
-                            as="p"
-                            translateZ="60"
-                            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                            Hover over this card to unleash the power of CSS
-                            perspective
-                        </CardItem>
-                        <CardItem
-                            as="p"
-                            translateZ="60"
-                            className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300">
-                            Hover over this card to unleash the power of CSS
-                            perspective
-                        </CardItem>
-                    </div>
-                    <div className="bg-orange-400 w-16 h-16 absolute -left-4 -bottom-4 rounded-full"></div>
-                    
+					<div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]">
+                        <div className="pt-4 text-md md:text-xl leading-tight text-end">
+                            <CardItem
+                                translateZ="50"
+                                className="text-xl font-bold text-neutral-600 dark:text-white">
+                                home
+                            </CardItem>
+                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                                <a href="">89898989</a>
+                            </div>
+                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                                <a href="">89898989</a>
+                            </div>
+                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                                <a href="">89898989</a>
+                            </div>
+                            <div className="text-slate-500 hover:text-emerald-500 hover:translate-x-1 transition">
+                                <a href="">89898989</a>
+                            </div>
+                        </div>
+					</div>
+					<div className="bg-orange-400 w-16 h-16 absolute -left-4 -bottom-4 rounded-full"></div>
 				</CardBody>
 			</CardContainer>
 

@@ -39,6 +39,13 @@ export default defineConfig({
 
         }
     },
+    css: {
+        preprocessorOptions: {
+          scss: {
+            api: "modern-compiler" // or 'modern'
+          }
+        }
+    },
     server: {
         host: '0.0.0.0',
         port: 8065,
@@ -48,4 +55,5 @@ export default defineConfig({
             "@": path.resolve(__dirname, "src"),
         },
     },
+    
 })

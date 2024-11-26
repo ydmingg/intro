@@ -29,7 +29,7 @@ const testimonials = [
                 text: "wenb"
             },
         ],
-		quote: "om, it was the age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespairdespairdespairdespairdespairdespair.",
+		quote: "om, it was the age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despaird.",
     },
     {
         name: "Charles Dickens",

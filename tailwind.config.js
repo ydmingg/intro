@@ -57,7 +57,8 @@ export default {
     		animation: {
     			orbit: 'orbit calc(var(--duration)*1s) linear infinite',
     			marquee: 'marquee var(--duration) infinite linear',
-    			'marquee-vertical': 'marquee-vertical var(--duration) linear infinite'
+                'marquee-vertical': 'marquee-vertical var(--duration) linear infinite',
+                scroll: "scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite",
     		},
     		keyframes: {
     			orbit: {
@@ -75,7 +76,12 @@ export default {
     				to: {
     					transform: 'translateX(calc(-100% - var(--gap)))'
     				}
-    			},
+                },
+                scroll: {
+                    to: {
+                      transform: "translate(calc(-50% - 0.5rem))",
+                    },
+                },
     			'marquee-vertical': {
     				from: {
     					transform: 'translateY(0)'
@@ -83,7 +89,8 @@ export default {
     				to: {
     					transform: 'translateY(calc(-100% - var(--gap)))'
     				}
-    			}
+                }
+                
     		}
     	}
     },

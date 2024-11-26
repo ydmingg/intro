@@ -1,98 +1,88 @@
-import { cn } from "@/lib/utils";
-import Marquee from "@/components/ui/marquee";
+import * as Icon from '@tabler/icons-react';
+import { InfiniteMovingCards } from "@/components/ui/infinite-moving-cards";
+import { NumberTicker } from "@/components/toggle/number-ticker";
 
-const reviews = [
-  {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "https://avatar.vercel.sh/jack",
-  },
-  {
-    name: "Jill",
-    username: "@jill",
-    body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "https://avatar.vercel.sh/jill",
-  },
-  {
-    name: "John",
-    username: "@john",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/john",
-  },
-  {
-    name: "Jane",
-    username: "@jane",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jane",
-  },
-  {
-    name: "Jenny",
-    username: "@jenny",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/jenny",
-  },
-  {
-    name: "James",
-    username: "@james",
-    body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "https://avatar.vercel.sh/james",
-  },
+const testimonials = [
+    {
+        name: "Charles Dickens",
+        link: {
+            icon: Icon.Icon123,
+            text: "other",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "other"
+            },
+        ],
+		quote: "It was thf, it was arkness, it was the spring of hope, it was the winter of despair.",
+    },
+    {
+        name: "Charles Dickens",
+        link: {
+            icon: Icon.Icon123,
+            text: "gitee",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "wenb"
+            },
+        ],
+		quote: "om, it was the age of foolishnenter of despairdespairdespairdespairdespairdespairdespairdespairdespair.",
+    },
+    {
+        name: "Charles Dickens",
+        link: {
+            icon: Icon.Icon123,
+            text: "github",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "wenb"
+            },
+        ],
+		quote: "Darkness, it was the spring of hope, it was the winter of despair.",
+    },
+    
 ];
 
-const firstRow = reviews.slice(0, reviews.length / 2);
-const secondRow = reviews.slice(reviews.length / 2);
-
-const ReviewCard = ({
-  img,
-  name,
-  username,
-  body,
-}: {
-  img: string;
-  name: string;
-  username: string;
-  body: string;
-}) => {
-  return (
-    <figure
-      className={cn(
-        "relative w-64 cursor-pointer overflow-hidden rounded-xl border p-4",
-        // light styles
-        "border-gray-950/[.1] bg-gray-950/[.01] hover:bg-gray-950/[.05]",
-        // dark styles
-        "dark:border-gray-50/[.1] dark:bg-gray-50/[.10] dark:hover:bg-gray-50/[.15]",
-      )}
-    >
-      <div className="flex flex-row items-center gap-2">
-        <img className="rounded-full" width="32" height="32" alt="" src={img} />
-        <div className="flex flex-col">
-          <figcaption className="text-sm font-medium dark:text-white">
-            {name}
-          </figcaption>
-          <p className="text-xs font-medium dark:text-white/40">{username}</p>
-        </div>
-      </div>
-      <blockquote className="mt-2 text-sm">{body}</blockquote>
-    </figure>
-  );
-};
-
-export function MarqueeDemo() {
-  return (
-    <div className="relative flex h-[500px] w-full flex-col items-center justify-center overflow-hidden rounded-lg md:shadow-xl">
-      <Marquee pauseOnHover className="[--duration:20s]">
-        {firstRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <Marquee reverse pauseOnHover className="[--duration:20s]">
-        {secondRow.map((review) => (
-          <ReviewCard key={review.username} {...review} />
-        ))}
-      </Marquee>
-      <div className="pointer-events-none absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-white dark:from-background"></div>
-      <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-white dark:from-background"></div>
-    </div>
-  );
+export function InfiniteMovingCardsDemo() {
+	return (
+		<div className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 py-36 md:py-48">
+			<p className="text-xl md:text-2xl">
+				I share stories about #programming, #gaming, #content-creation
+				and #life on the Internet.
+				<br />
+                My stories have attracted followers. 
+                <strong>
+                    <NumberTicker value={285844} className="inline-block tabular-nums dark:text-white text-orange-400 text-2xl md:text-3xl font-weight px-2" />
+                </strong>
+                followers.  
+                <br />
+                
+			</p>
+            <InfiniteMovingCards
+				items={testimonials}
+				direction="left"
+				speed="fast"
+            />
+            <InfiniteMovingCards
+				items={testimonials}
+				direction="left"
+				speed="fast"
+            />
+            <p className="text-xl md:text-2xl mt-12">
+				Storytelling is my passion because I've been profoundly shaped
+				by the stories of others.
+                <br />
+                <a href="" className="flex items-center text-orange-400 font-bold underline gap-1">
+                    Discover my inspirations here 
+                    <Icon.IconLink stroke="3" />
+                </a>
+            </p>
+            
+		</div>
+	);
 }

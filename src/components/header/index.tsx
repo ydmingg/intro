@@ -1,5 +1,14 @@
 import * as Icon from '@tabler/icons-react';
-
+import {
+    Routes,
+    Route,
+    NavLink,
+    Navigate,
+    useNavigate,
+    useRoutes,
+} from "react-router-dom";
+import myRoutes from "@/router";
+  
 export function Header() { 
     return (
         <header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
@@ -11,9 +20,9 @@ export function Header() {
                         </span>
                     </a>
                     <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        <a
+                        {/* <a
                             className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground"
-                            href="/docs/components">
+                            href="/">
                             Home
                         </a>
                         <a
@@ -27,10 +36,11 @@ export function Header() {
                             Code
                         </a>
                         <a
-                            href="https://newcult.co"
+                            href="/other"
                             className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground/60">
-                            Links
-                        </a>
+                            Other
+                        </a> */}
+                        <NavLink to="/"></NavLink>
                     </nav>
                 </div>
                 <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

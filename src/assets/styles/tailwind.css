@@ -64,9 +64,4 @@
   body {
     @apply bg-background text-foreground;
   }
-  .intro{
-    position: relative;
-    background-image: linear-gradient(90deg, #fcfcfd 0%, #e7e8ec 100%);
-    min-height: 100vh;
-  }
 }

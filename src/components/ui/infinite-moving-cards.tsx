@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
 import React, { useEffect, useState } from "react";
-import * as Icon from "@tabler/icons-react"
 
 export const InfiniteMovingCards = ({
 	items,
@@ -10,12 +9,13 @@ export const InfiniteMovingCards = ({
 	className,
 }: {
     items: {
-        name: string;
-        link: {
-            icon: any;
-            text: string;
-        };
-        tip: any;
+        id: string;
+		name: string;
+		link: {
+			icon: React.ComponentType<any>;
+			text: string;
+		};
+		tip: { value: number; text: string }[];
 		quote: string;
 	}[];
 	direction?: "left" | "right";
@@ -25,7 +25,16 @@ export const InfiniteMovingCards = ({
 }) => {
 	const containerRef = React.useRef<HTMLDivElement>(null);
 	const scrollerRef = React.useRef<HTMLUListElement>(null);
-
+	// 设置一个颜色数组
+	const colors = [
+		"bg-teal-800",
+		"bg-blue-800",
+        "bg-purple-800",
+        "bg-indigo-800",
+        "bg-pink-800",
+        "bg-green-800",
+	];
+    
 	useEffect(() => {
 		addAnimation();
 	}, []);
@@ -97,46 +106,31 @@ export const InfiniteMovingCards = ({
 				)}>
 				{items.map((item, idx) => (
 					<li
-						className="h-auto w-[350px] max-w-full relative rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px] overflow-hidden flex flex-col gap-1 bg-green-800"
-						// style={{
-						// 	background:
-						// 		"linear-gradient(180deg, var(--slate-800), var(--slate-900)",
-						// }}
-						key={item.name}>
-                        <div className="flex text-white gap-2 items-center justify-between">
-                            <p className="text-lg font-bold">{item.name}</p>
-                            <div className="text-md flex gap-1 items-center text-gray-200">
-                                {/* <item.tip /> */}
-                                <p>{item.link.text}</p>
-                            </div>
-                        </div>
-                        <div className="flex text-white gap-4 items-center">
-
-                            {/* <div className="text-sm text-gray-200">
-                                <strong className="text-white">{ item.tip }</strong>
-                                { item.quote}
-                            </div> */}
-
-                        </div>
-                        <p className="text-sm text-gray-200">{ item.quote }</p>
-						{/* <blockquote>
-							<div
-								aria-hidden="true"
-								className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"></div>
-							<span className=" relative z-20 text-sm leading-[1.6] font-normal">
-								{item.quote}
-							</span>
-							<div className="relative z-20 mt-6 flex flex-row items-center">
-								<span className="flex flex-col gap-1">
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-										{item.name}
-									</span>
-									<span className=" text-sm leading-[1.6] text-gray-400 font-normal">
-										{item.title}
-									</span>
-								</span>
+						className={cn(
+							"h-auto w-[350px] max-w-full relative rounded-2xl border border-b-0 border-slate-700 px-8 py-6 md:w-[450px] overflow-hidden flex flex-col gap-1",
+                            colors[Math.round(Math.random() * colors.length) % colors.length]
+                            
+						)}
+						key={item.id}>
+						<div className="flex text-white gap-2 items-center justify-between">
+							<p className="text-lg font-bold">{item.name}</p>
+							<div className="text-md flex gap-1 items-center text-gray-200">
+								{/* <item.tip /> */}
+								<item.link.icon stroke="3" size="16" />
+								<p>{item.link.text}</p>
 							</div>
-						</blockquote> */}
+						</div>
+						<div className="flex text-white gap-4 items-center">
+							{item.tip.map((ele, idxx) => (
+								<p className="text-sm text-gray-200" key={item.id + ele.text + idxx}>
+									<strong className="text-white mr-1">
+										{ele.value}
+									</strong>
+									{ele.text}
+								</p>
+							))}
+						</div>
+						<p className="text-sm text-gray-200">{item.quote}</p>
 					</li>
 				))}
 			</ul>

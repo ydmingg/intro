@@ -1,15 +1,8 @@
+import RoutersConfig from "@/router";
 import { Header } from "@/components/header"
 import { BgBall } from "@/components/decorate/bg-ball"
-import { Home } from "@/pages/home"
-import {
-    Routes,
-    Route,
-    NavLink,
-    Navigate,
-    useNavigate,
-    useRoutes,
-} from "react-router-dom";
-import myRouter from "@/router"
+import { Footer } from "@/components/footer"
+
 
 function App() {
     return (
@@ -17,8 +10,9 @@ function App() {
             <Header></Header>
             <BgBall></BgBall>
             <main className="intro-main w-full">
-                { useRoutes(myRouter)}
+                <RoutersConfig />
             </main>
+            <Footer></Footer>
         </section>
     )
 }

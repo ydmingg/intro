@@ -1,50 +1,48 @@
-import * as Icon from '@tabler/icons-react';
-import {
-    Routes,
-    Route,
-    NavLink,
-    Navigate,
-    useNavigate,
-    useRoutes,
-} from "react-router-dom";
-import myRoutes from "@/router";
-  
-export function Header() { 
-    return (
-        <header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
-            <div className="flex h-14 items-center p-4">
+import * as Icon from "@tabler/icons-react";
+import { cn } from "@/lib/utils";
+import { NavLink } from "react-router-dom";
+
+// 导航链接数据
+const navLinks = [
+	{ to: "/", label: "Home" },
+	{ to: "/other", label: "other" },
+	// { to: "/dashboard/analytics", label: "Analytics" },
+	// { to: "/dashboard/settings", label: "Settings" },
+	// { to: "/dashboard/profile", label: "Profile" },
+];
+
+// 导航链接激活状态
+function classNameActivew({ isActive }: {isActive: boolean}): string{ 
+    return isActive ? 'text-foreground' : 'text-foreground/60'
+}
+
+export function Header() {
+	return (
+		<header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
+			<div className="flex h-14 items-center p-4">
                 <div className="mr-4 hidden md:flex ">
-                    <a className="mr-6 flex items-center space-x-2" href="/">
-                        <span className="hidden text-lg font-bold sm:inline-block">
-                            Damuing
-                        </span>
-                    </a>
-                    <nav className="flex items-center gap-4 text-sm lg:gap-6">
-                        {/* <a
-                            className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground"
-                            href="/">
-                            Home
-                        </a>
-                        <a
-                            className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground/60"
-                            href="/themes">
-                            Influencer
-                        </a>
-                        <a
-                            href="https://newcult.co"
-                            className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground/60">
-                            Code
-                        </a>
-                        <a
-                            href="/other"
-                            className="text-base font-semibold transition-colors hover:text-foreground/80 text-foreground/60">
-                            Other
-                        </a> */}
-                        <NavLink to="/"></NavLink>
-                    </nav>
-                </div>
-                <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
-                    {/* <div className="w-full flex-1 md:w-auto md:flex-none">
+					<a className="mr-6 flex items-center space-x-2" href="/">
+						<span className="hidden text-lg font-bold sm:inline-block">
+                            BingBing
+						</span>
+					</a>
+					<nav className="flex items-center gap-4 text-sm lg:gap-6">
+						{navLinks.map((link) => (
+							<NavLink
+								to={link.to}
+                                key={link.to}
+                                className={({ isActive }) => cn(
+                                    "text-base font-semibold transition-colors hover:text-foreground/80",
+                                    classNameActivew({ isActive: isActive })
+                                )}>
+								{link.label}
+							</NavLink>
+                        ))}
+                        
+					</nav>
+				</div>
+				<div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+					{/* <div className="w-full flex-1 md:w-auto md:flex-none">
                         <button className="inline-flex items-center whitespace-nowrap ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input hover:bg-accent hover:text-accent-foreground px-4 py-2 relative h-8 w-full justify-start rounded-[0.5rem] bg-background text-sm font-normal text-muted-foreground shadow-none sm:pr-12 md:w-40 lg:w-64">
                             <span className="hidden lg:inline-flex">
                                 搜索文件...
@@ -55,17 +53,17 @@ export function Header() {
                             </kbd>
                         </button>
                     </div> */}
-                    <nav className="flex items-center ">
-                        <a
-                            target="_blank"
-                            rel="noreferrer"
-                            href="https://github.com/ydmingg">
-                            <div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0">
-                                <Icon.IconBrandGithub />
-                                <span className="sr-only">GitHub</span>
-                            </div>
-                        </a>
-                        {/* <button
+					<nav className="flex items-center ">
+						<a
+							target="_blank"
+							rel="noreferrer"
+							href="https://github.com/ydmingg">
+							<div className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0">
+								<Icon.IconBrandGithub />
+								<span className="sr-only">GitHub</span>
+							</div>
+						</a>
+						{/* <button
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0"
                             type="button"
                             id="radix-:r4:"
@@ -100,9 +98,9 @@ export function Header() {
                             </svg>
                             <span className="sr-only">Toggle theme</span>
                         </button> */}
-                    </nav>
-                </div>
-            </div>
-        </header>
-    )
+					</nav>
+				</div>
+			</div>
+		</header>
+	);
 }

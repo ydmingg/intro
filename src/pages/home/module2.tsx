@@ -6,7 +6,7 @@ import { Highlight } from "@/components/ui/hero-highlight";
 const testimonials = [
     {
         id: "testimonials1",
-        name: "Charles Dickens",
+        name: "xiaoheizhu",
         link: {
             icon: Icon.IconButterfly,
             text: "other",
@@ -21,11 +21,11 @@ const testimonials = [
                 text: "list"
             },
         ],
-		quote: "It was thf, it was arkness, it was the spring of hope, it was the winter of despair.",
+		quote: "zhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhe",
     },
     {
         id: "testimonials2",
-        name: "Charles Dickens",
+        name: "xiaoheizhu",
         link: {
             icon: Icon.IconSitemap,
             text: "gitee",
@@ -36,11 +36,11 @@ const testimonials = [
                 text: "asdfsdf"
             },
         ],
-		quote: "om, it was the age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despairdespairdespairdespai age of foolishnenter of despaird.",
+		quote: "asdfasdfasdfasdfasdfasdfasdfasdfasdsdfage of foolishnenter of despaird.",
     },
     {
         id: "testimonials3",
-        name: "Charles Dickens",
+        name: "guanyu",
         link: {
             icon: Icon.IconBrandGithub,
             text: "github",
@@ -51,7 +51,52 @@ const testimonials = [
                 text: "asdf"
             },
         ],
-		quote: "Darkness, it was the spring of hope, it was the winter of despair.",
+		quote: "asdfasdf asdf asdfasdfl ikjahsdkfjhasdkjlf sdf espair.",
+    },
+    {
+        id: "testimonials4",
+        name: "guanyu",
+        link: {
+            icon: Icon.IconBrandGithub,
+            text: "github",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "asdf"
+            },
+        ],
+		quote: "asdfasdf asdf asdfasdfl ikjahsdkfjhasdkjlf sdf espair.",
+    },
+    {
+        id: "testimonials5",
+        name: "xiaoheizhu",
+        link: {
+            icon: Icon.IconBrandGithub,
+            text: "github",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "asdf"
+            },
+        ],
+		quote: "asdasdfasdfsdfasdasdfasdfsdfasdasdf asdfsdfasdasdfasdfsdfasdasdfasdfsdf espair.",
+    },
+    {
+        id: "testimonials6",
+        name: "guanyu",
+        link: {
+            icon: Icon.IconBrandGithub,
+            text: "github",
+        },
+        tip: [
+            {
+                value: 12,
+                text: "asdf"
+            },
+        ],
+		quote: "asdfasdf asdf asdfasdfl ikjahsdkfjhasdkjlf sdf espair.",
     },
     
 ];
@@ -60,35 +105,35 @@ export function InfiniteMovingCardsDemo() {
 	return (
 		<div className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 py-36 md:py-48">
 			<p className="text-xl md:text-2xl">
-				I share stories about #programming, #gaming, #content-creation
-				and #life on the Internet.
+				asdfasdfasdfasdfasdfasdfasdfasdfasdfasdfasdf ntent-creation
+				and #lifeasdf ternet.
 				<br />
-                My stories have attracted followers. 
+                My stoasdf acted follsdf 
                 <strong>
                     <NumberTicker value={285844} className="inline-block tabular-nums dark:text-white text-orange-400 text-2xl md:text-3xl font-weight px-2" />
                 </strong>
                 followers.  
                 <br />
                 <Highlight className="text-black dark:text-white">
-                    Storytelling is my passion because I've been profoundly
+                    Storyteasdfasdfasd asdfasdfasdfds ve been profoundly
                 </Highlight>
 			</p>
             <InfiniteMovingCards
 				items={testimonials}
 				direction="left"
-				speed="fast"
+				speed="slow"
             />
             <InfiniteMovingCards
 				items={testimonials}
 				direction="left"
-				speed="fast"
+				speed="slow"
             />
             <p className="text-xl md:text-2xl mt-12">
-				Storytelling is my passion because I've been profoundly shaped
-				by the stories of others.
+				Stoasdfasdfasdfasdfasdfasdfasd fasdfasdfasd fasdfasdfasdfasdfas dfasdfasdfasdfasdfxcvzasdf asdfasdfasd ofoundly shaped
+				byasdfasdf others. Stoasdfasdfasdfasdfasdfasdfasd Stoasdfasdfasdfasdfasdfasdfasd
                 <br />
                 <a href="" className="flex items-center text-orange-400 font-bold underline gap-1">
-                    Discover my inspirations here 
+                    Discoverasdfasdfasdf asdfa ere 
                     <Icon.IconLink stroke="3" />
                 </a>
             </p>

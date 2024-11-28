@@ -10,13 +10,13 @@ export function OrbitingCirclesDemo() {
 					<CardItem
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
-						home
+						How is me:
 					</CardItem>
 					<CardItem
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
 						<h2 className="py-6 border-b-2 border-slate-700">
-                            <GradualSpacing className="inline-block" text='function' />
+                            <GradualSpacing className="inline-block" text="XIAOHIZHU" />
 						</h2>
 					</CardItem>
 					<div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]">
@@ -24,19 +24,19 @@ export function OrbitingCirclesDemo() {
                             <CardItem
                                 translateZ="50"
                                 className="text-xl font-bold text-neutral-600 dark:text-white">
-                                home
+                                About me:
                             </CardItem>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">89898989</a>
+                                <a href="">00000000000</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">89898989</a>
+                                <a href="">111111111111</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">89898989</a>
+                                <a href="">22222222222222222</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">89898989</a>
+                                <a href="">333333333333333</a>
                             </div>
                         </div>
 					</div>

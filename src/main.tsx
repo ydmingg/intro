@@ -12,7 +12,7 @@ import '@/assets/styles/index.scss'
 const root = createRoot(document.getElementById('app')!)
 root.render(
     <React.StrictMode>
-        <BrowserRouter>
+        <BrowserRouter >
             <App />
         </BrowserRouter>
     </React.StrictMode>

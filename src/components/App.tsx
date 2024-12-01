@@ -1,20 +1,11 @@
-import RoutersConfig from "@/router";
-import { Header } from "@/components/header"
-import { BgBall } from "@/components/decorate/bg-ball"
-import { Footer } from "@/components/footer"
-
+import { useRoutes } from "react-router-dom";
+import configRoutes from "@/router";
 
 function App() {
-    return (
-        <section className="intro overflow-hidden">
-            <Header></Header>
-            <BgBall></BgBall>
-            <main className="intro-main w-full">
-                <RoutersConfig />
-            </main>
-            <Footer></Footer>
-        </section>
-    )
+	// 根据路由表生成对应的路由规则
+	const ElementRouter = useRoutes(configRoutes);
+
+	return <>{ElementRouter}</>;
 }
 
-export default App
+export default App;

@@ -1,14 +1,17 @@
-import { Navigate, useRoutes } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 // Routes,
 //     Route,
 //     NavLink,
 //     Navigate,
 //     useNavigate,
 //     useRoutes,
-
+// 导入路由插件
 // import About from "../pages/About";
 // import Category from "../pages/Category";
 // import Detail from "../pages/Detail";
+
+import { Layout } from "@/components/layout";
+import { Login } from "@/pages/login";
 import { Home } from "@/pages/home";
 import { Other } from "@/pages/other";
 // import HomeRanking from "../pages/HomeRanking";
@@ -23,22 +26,32 @@ import { Other } from "@/pages/other";
 // const About = React.lazy(() => import("../pages/About"));
 // const Login = React.lazy(() => import("../pages/Login"));
 
-export default function RoutersConfig() { 
-    const routers = [
-        { path: "/", element: <Home />},
-        {
-            path: "/other",
-            element: <Other />,
-            // children: [
-            // 	{
-            // 		path: "/list/recommend",
-            // 		element: <HomeRecommend />,
-            // 	},
-            // ],
-        },
-        { path: "/other", element: <Navigate to="/"/> },
-        
-    ];
+const configRoutes = [
+	{
+		path: "/",
+		element: <Layout />,
+		children: [
+            { index: true, element: <Home />},
+			{ path: "other", element: <Other /> },
+		],
+	},
+	// 登录
+	{ path: "/login", element: <Login /> },
+	{ path: "*", element: <Navigate to="/404" /> },
 
-    return useRoutes(routers);
-}
+	// { path: "/", element: <Home /> },
+	// { path: "/login", element: <Login /> },
+	// {
+	//     path: "/other",
+	//     element: <Other />,
+	//     // children: [
+	//     // 	{
+	//     // 		path: "/list/recommend",
+	//     // 		element: <HomeRecommend />,
+	//     // 	},
+	//     // ],
+	// },
+	// { path: "/oaaaaaa", element: <Navigate to="/"/> },
+];
+
+export default configRoutes;

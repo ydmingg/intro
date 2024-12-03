@@ -15,9 +15,7 @@ export function Module3() {
 					</p>
 					<div className="my-auto font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
 						<div className="relative z-10 h-full min-h-[130px]">
-							<div
-								className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center"
-                                >
+							<div className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center">
 								<div>
 									I added features into a giant{" "}
 									<a
@@ -66,7 +64,7 @@ export function Module3() {
 								<Icon.IconArrowUpRight className="ml-8 relative top-2 text-slate-300" />
 							</div>
 							<div className="text-sm text-gray-400">
-								Diagnosis and Optimize for customers' network
+                                Diagnosis and Optimize for customers' network
 							</div>
 						</div>
 					</div>

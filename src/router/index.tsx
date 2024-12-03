@@ -14,6 +14,7 @@ import { Layout } from "@/components/layout";
 import { Login } from "@/pages/login";
 import { Home } from "@/pages/home";
 import { Other } from "@/pages/other";
+import * as Error from "@/pages/error";
 // import HomeRanking from "../pages/HomeRanking";
 // import HomeRecommend from "../pages/HomeRecommend";
 // import HomeSongMenu from "../pages/HomeSongMenu";
@@ -36,8 +37,12 @@ const configRoutes = [
 		],
 	},
 	// 登录
-	{ path: "/login", element: <Login /> },
-	{ path: "*", element: <Navigate to="/404" /> },
+    { path: "/login", element: <Login /> },
+    { path: "*", element: <Error.NotFound /> },
+    
+	// { path: "*", element: <NotFound /> },
+    
+	// { path: "*", element: <Navigate to="/404" /> },
 
 	// { path: "/", element: <Home /> },
 	// { path: "/login", element: <Login /> },

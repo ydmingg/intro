@@ -1,31 +1,6 @@
-import React, { useState, useRef } from "react";
 import axios from "axios";
 
 export function Other() {
-    const InputRef = useRef<HTMLInputElement>(null)
-    let  index = 0
-
-    function fun() { 
-        console.log(index++);
-    }
-
-    function fun2(fn:any, time: any) { 
-        let startTime = 0;
-        return function () { 
-            let nowTime = +new Date()
-            if (nowTime - startTime >= time) { 
-                fun.bind(InputRef)();
-                startTime = nowTime;
-            }
-
-        }
-    }
-
-    
-
-
-
-
     // 设置根目录
     const baseURL = "http://localhost:3000";
     
@@ -52,7 +27,6 @@ export function Other() {
 					type="text"
 					aria-label="Filter projects"
                     placeholder="Filter projects..."
-                    ref={InputRef}
 				/>
 				<button
 					type="button"

@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export const Login: React.FC<React.PropsWithChildren> = ({ children }) => {
+export function Login() {
 	const navigate = useNavigate();
     const userRef = useRef<HTMLInputElement>(null);
 	const pwdRef = useRef<HTMLInputElement>(null);

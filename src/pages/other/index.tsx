@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import axios from "axios";
 
 export function Other() {
-    const [index, setIndex] = useState(0);
+    const InputRef = useRef<HTMLInputElement>(null)
+    let  index = 0
 
-    console.log(index);
-    function handleClick() {
-        setIndex(index + 1);
+    function fun() { 
+        console.log(index++);
     }
+
+    function fun2(fn:any, time: any) { 
+        let startTime = 0;
+        return function () { 
+            let nowTime = +new Date()
+            if (nowTime - startTime >= time) { 
+                fun.bind(InputRef)();
+                startTime = nowTime;
+            }
+
+        }
+    }
+
     
 
 
 
 
-
-
-    
     // 设置根目录
     const baseURL = "http://localhost:3000";
     
@@ -42,7 +52,7 @@ export function Other() {
 					type="text"
 					aria-label="Filter projects"
                     placeholder="Filter projects..."
-                    onClick={handleClick}
+                    ref={InputRef}
 				/>
 				<button
 					type="button"

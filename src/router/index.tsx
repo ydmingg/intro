@@ -38,7 +38,7 @@ const configRoutes = [
 	},
 	// 登录
     { path: "/login", element: <Login /> },
-    { path: "*", element: <Error.NotFound /> },
+    { path: "*", element: <Error.Test /> },
     
 	// { path: "*", element: <NotFound /> },
     

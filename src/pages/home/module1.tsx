@@ -10,7 +10,7 @@ export function OrbitingCirclesDemo() {
 					<CardItem
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
-						How is me:
+						Name:
 					</CardItem>
 					<CardItem
 						translateZ="50"

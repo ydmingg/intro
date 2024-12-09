@@ -131,23 +131,21 @@ export function InfiniteMovingCardsDemo() {
 				direction="left"
 				speed="slow"
 			/>
-			<p className="text-xl md:text-2xl mt-12">
+			<div className="text-xl md:text-2xl mt-12">
 				Stoasdfasdfasdfasdfasdfasdfasd fasdfasdfasd fasdfasdfasdfasdfas
 				dfasdfasdfasdfasdfxcvzasdf asdfasdfasd ofoundly shaped
 				byasdfasdf others. Stoasdfasdfasdfasdfasdfasdfasd
 				Stoasdfasdfasdfasdfasdfasdfasd
 				<br />
-				<a
-					href=""
-					className="flex items-center text-orange-400 font-bold underline gap-1">
+				<div className="flex items-center text-orange-400 font-bold underline gap-1">
 					<LinkPreview
 						url="https://www.bilibili.com/"
 						className="flex align-center w-auto font-bold bg-clip-text gap-1">
 						Discoverasdfasdfasdf asdfa ere
 						<Icon.IconLink stroke="3" />
 					</LinkPreview>
-				</a>
-			</p>
+				</div>
+			</div>
 		</div>
 	);
 }

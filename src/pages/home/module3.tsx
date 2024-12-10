@@ -1,6 +1,12 @@
 import * as Icon from "@tabler/icons-react";
+import { useRef } from "react";
 
 export function Module3() {
+    const ref = useRef(null);
+    const newRef = useRef(null);
+
+    
+
 	return (
 		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-32 lg:mt-64">
 			<div className="accentLightBg w-full lg:w-2/3 rounded-3xl block lg:flex relative left-0 right-5 py-6 pl-6 xl:pl-12 pr-6 lg:pr-0">
@@ -13,9 +19,17 @@ export function Module3() {
 						I have worked at Microsoft for 4 years, developed
 						multiple products.
 					</p>
-					<div className="my-auto font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
-						<div className="relative z-10 h-full min-h-[130px]">
-							<div className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center">
+					<div
+						ref={ref}
+						className="my-auto font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
+						<div className="relative z-10 h-full min-h-[130px] cursor-pointer">
+                            <div
+                                ref={ newRef }
+								className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center"
+								style={{
+									opacity: 0,
+									transform: "translateY(20%) rotateZ(-10deg) translateZ(0px)",
+								}}>
 								<div>
 									I added features into a giant{" "}
 									<a
@@ -64,7 +78,7 @@ export function Module3() {
 								<Icon.IconArrowUpRight className="ml-8 relative top-2 text-slate-300" />
 							</div>
 							<div className="text-sm text-gray-400">
-                                Diagnosis and Optimize for customers' network
+								Diagnosis and Optimize for customers' network
 							</div>
 						</div>
 					</div>

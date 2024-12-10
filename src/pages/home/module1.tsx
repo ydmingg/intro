@@ -1,8 +1,10 @@
 import OrbitingCircles from "@/components/ui/orbiting-circles";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import GradualSpacing from "@/components/ui/gradual-spacing";
+import { FlipWords } from "@/components/ui/flip-words.tsx";
 
 export function OrbitingCirclesDemo() {
+    const words = ["xiaoheizhu", "cute", "beautiful", "bingbing"];
+
 	return (
 		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
 			<CardContainer className="inter-var">
@@ -16,8 +18,8 @@ export function OrbitingCirclesDemo() {
 						translateZ="50"
 						className="text-xl font-bold text-neutral-600 dark:text-white">
 						<h2 className="py-6 border-b-2 border-slate-700">
-                            <GradualSpacing className="inline-block" text="XIAOHIZHU" />
-						</h2>
+                            <FlipWords words={words} />
+                        </h2>
 					</CardItem>
 					<div className="[transform-style:preserve-3d] [&>*]:[transform-style:preserve-3d]">
                         <div className="pt-4 text-md md:text-xl leading-tight text-end">

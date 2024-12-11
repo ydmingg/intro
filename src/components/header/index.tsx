@@ -12,33 +12,36 @@ const navLinks = [
 ];
 
 // 导航链接激活状态
-function classNameActivew({ isActive }: {isActive: boolean}): string{ 
-    return isActive ? 'text-foreground' : 'text-foreground/60'
+function classNameActivew({ isActive }: { isActive: boolean }): string {
+	return isActive ? "text-foreground" : "text-foreground/60";
 }
 
 export function Header() {
 	return (
 		<header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
 			<div className="flex h-14 items-center p-4">
-                <div className="mr-4 hidden md:flex ">
+				<div className="mr-4 hidden md:flex ">
 					<a className="mr-6 flex items-center space-x-2" href="/">
-						<span className="hidden text-lg font-bold sm:inline-block">
+                        <span className="hidden text-lg font-bold sm:inline-block">
                             BingBing
-						</span>
+                        </span>
 					</a>
 					<nav className="flex items-center gap-4 text-sm lg:gap-6">
 						{navLinks.map((link) => (
 							<NavLink
 								to={link.to}
-                                key={link.to}
-                                className={({ isActive }) => cn(
-                                    "text-base font-semibold transition-colors hover:text-foreground/80",
-                                    classNameActivew({ isActive: isActive })
-                                )}>
+								key={link.to}
+								className={({ isActive }) =>
+									cn(
+										"text-base font-semibold transition-colors hover:text-foreground/80",
+										classNameActivew({
+											isActive: isActive,
+										})
+									)
+								}>
 								{link.label}
 							</NavLink>
-                        ))}
-                        
+						))}
 					</nav>
 				</div>
 				<div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">

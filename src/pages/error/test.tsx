@@ -1,5 +1,6 @@
 import * as Icon from "@tabler/icons-react";
-import { AnimatePresence, motion, transform } from "framer-motion";
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 export function Test() {
 	// const arr = [9, 5, 6, 8, 2, 7, 3, 4, 1];
@@ -28,26 +29,37 @@ export function Test() {
 	// const aaaa = ssssss(arr);
 	// console.log(aaaa);
 
-
+    const [isHovered, setIsHovered] = useState(false);
+    const hoverStyle = {
+        default: {
+            opacity: 0,
+            transform: "translateX(-20%) translateY(20%) rotateZ(-10deg)"
+        },
+        hover: {
+            opacity: 1,
+            transform: "translateX(0%) translateY(0%) rotateZ(0deg)"
+        }
+    }
 
 	return (
 		<div className="m-40 bg-indigo-100 w-[500px] ceshi">
 			<div className="my-auto font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
-				<div className="relative z-10 h-full min-h-[130px] cursor-pointer">
-					<div
-						className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center"
-						style={{
-							opacity: 0,
-							transform: "translateY(20%) rotateZ(-10deg) translateZ(0px)",
-						}}>
-						<div>
-						<div style={{
-  transform: "translateY(0%) rotateZ(0deg)",
-  transition: {
-    duration: 300,
-    ease: "easeInOut",
-  },
-}}>
+                <motion.div
+                    onHoverStart={() => setIsHovered(true)}
+                    onHoverEnd={() => setIsHovered(false)}
+                    className="relative z-10 h-full min-h-[130px] cursor-pointer">
+                    <motion.div
+                        initial={{...hoverStyle.default}}
+                        animate={isHovered ? {...hoverStyle.hover} : {...hoverStyle.default}}
+						className="text-sm text-gray-50 link_decoration accentDarkBg w-full h-full rounded-xl px-4 py-8 flex items-center">
+						<div
+							style={{
+								transform: "translateY(0%) rotateZ(0deg)",
+								transition: {
+									duration: 300,
+									ease: "easeInOut",
+								},
+							}}>
 							I added features into a giant{" "}
 							<a
 								target="_blank"
@@ -84,8 +96,8 @@ export function Test() {
 								FluentUI
 							</a>
 						</div>
-					</div>
-				</div>
+					</motion.div>
+				</motion.div>
 				<div className="px-4 py-8 w-full h-full absolute left-0 top-0">
 					<div className="flex items-start mb-3 justify-between">
 						<div className="font-fantasy text-lg">
@@ -97,30 +109,28 @@ export function Test() {
 						Diagnosis and fsgdfg for customers' network
 					</div>
 				</div>
-            </div>
-            
+			</div>
 
-            <motion.div
-                className="box-img relative z-[1] bg-blue-400"
-                whileHover={{
-                    // 当鼠标悬停在父元素上时，子元素将应用这些样式
-                    children: {
-                        transform: "translateY(0%) rotateZ(0deg)",
-                      opacity: 1,
-                      transition: { duration: 0.5, ease: "easeInOut" }
-                        
-                    }
-                }}
-                
-            >
-                <motion.div
-                    initial={{
-                        transform: "translateY(20%) rotateZ(-10deg) translateZ(0px)",
-                        opacity: 0,
-                    }}
-                    className="bg-white w-[400px] h-[200px] rounded-xl">sadfasdfasdfasdfsdf</motion.div>
-            </motion.div>
-
+			{/* <motion.div
+                className="box-img relative z-[1] bg-blue-400 overflow-hidden"
+                onHoverStart={() => setIsHovered(true)}
+                onHoverEnd={() => setIsHovered(false)}
+				whileHover={{
+					// 当鼠标悬停在父元素上时，子元素将应用这些样式
+					// children: {
+					// 	transform: "translateY(0%) rotateZ(0deg)",
+					// 	opacity: 1,
+					// 	transition: { duration: 0.5, ease: "easeInOut" },
+					// },
+				}}>
+				<motion.div
+					initial={{...hoverStyle.default}}
+                    animate={isHovered ? {...hoverStyle.hover} : {...hoverStyle.default}}
+                    // transition={{ type: "spring", stiffness: 300 }}
+                    className="bg-gray-600 w-100% h-[200px] text-white">
+					sadfasdfasdfasdfsdf
+				</motion.div>
+			</motion.div> */}
 		</div>
 	);
 }

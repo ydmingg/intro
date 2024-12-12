@@ -11,11 +11,10 @@ export function Module3() {
 						ADSASDA
 					</h2>
 					<p className="text-xl py-6">
-						I have worked at Microsoft for 4 years, developed
-						multiple products.
+                        I have been working in the design field for 3 years and have developed several products.
 					</p>
 					<InfoCard
-						overlayTitle="Microsoft 365 networking connectivity"
+						overlayTitle="Major front-end design work"
 						overlayDescription="I'm always enthusiastic about open source and the Web. Enjoy a lot to work on it."
 						infoCardContent={
 							<div>
@@ -62,7 +61,7 @@ export function Module3() {
 					<div className="h-full w-full lg:w-[220%] xl:w-[200%] accentDarkBg rounded-3xl flex py-6 flex-wrap lg:flex-nowrap">
 						<div className="flex-initial w-full lg:w-1/2 flex flex-col px-4 xl:px-6 gap-4">
 							<InfoCard
-								overlayTitle="Microsoft 365 netwo"
+								overlayTitle="Major front-end design work"
 								overlayDescription="I'm always enthusiastic about open source and the Web. Enjoy a lot to work on it."
 								infoCardContent={
 									<div>
@@ -106,7 +105,7 @@ export function Module3() {
 								}
 							/>
 							<InfoCard
-								overlayTitle="Microsoft 365 netwo"
+								overlayTitle="Major front-end design work"
 								overlayDescription="I'm always enthusiastic about open source and the Web. Enjoy a lot to work on it."
 								infoCardContent={
 									<div>

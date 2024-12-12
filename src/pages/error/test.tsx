@@ -55,10 +55,10 @@ export function Test() {
 						<div
 							style={{
 								transform: "translateY(0%) rotateZ(0deg)",
-								transition: {
-									duration: 300,
-									ease: "easeInOut",
-								},
+								// transition: {
+								// 	duration: 300,
+								// 	ease: "easeInOut",
+								// },
 							}}>
 							I added features into a giant{" "}
 							<a

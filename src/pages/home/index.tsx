@@ -12,7 +12,10 @@ export function Home() {
             <BlurFade inView={true} delay={0.4} yOffset={20}>
 				<Module3></Module3>
             </BlurFade>
-            <Module4></Module4>
+            <BlurFade inView={true} delay={0.4} yOffset={20}>
+                <Module4></Module4>
+            </BlurFade>
+            
 		</>
 	);
 }

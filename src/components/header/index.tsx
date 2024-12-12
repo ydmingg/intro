@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 const navLinks = [
 	{ to: "/", label: "Home" },
 	{ to: "/other", label: "other" },
-	// { to: "/dashboard/analytics", label: "Analytics" },
+	// { to: "/design", label: "Analytics" },
 	// { to: "/dashboard/settings", label: "Settings" },
 	// { to: "/dashboard/profile", label: "Profile" },
 ];
@@ -65,7 +65,16 @@ export function Header() {
 								<Icon.IconBrandGithub />
 								<span className="sr-only">GitHub</span>
 							</div>
-						</a>
+                        </a>
+                        <button
+                            className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0"
+                            type="button"
+                            id="radix-:r4:"
+                            aria-haspopup="menu"
+                            aria-expanded="false"
+                            data-state="closed">
+                            <Icon.IconSun  />
+                        </button>
 						{/* <button
                             className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-10 py-2 w-9 px-0"
                             type="button"

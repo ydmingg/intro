@@ -22,7 +22,7 @@ const testimonials = [
 				text: "list",
 			},
 		],
-		quote: "zhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhezhe",
+		quote: "Through vivid narratives, I share my reflections on software engineering, explore the depths of technology. I also apply technology to body hacking and guide beginners in learning to code.",
 	},
 	{
 		id: "testimonials2",
@@ -37,7 +37,7 @@ const testimonials = [
 				text: "asdfsdf",
 			},
 		],
-		quote: "asdfasdfasdfasdfasdfasdfasdfasdfasdsdfage of foolishnenter of despaird.",
+		quote: "asdfasdfasdfasdfasd fasdfasdfasdfasdsdfage of foolishnenter of despaird.",
 	},
 	{
 		id: "testimonials3",
@@ -82,7 +82,7 @@ const testimonials = [
 				text: "asdf",
 			},
 		],
-		quote: "asdasdfasdfsdfasdasdfasdfsdfasdasdf asdfsdfasdasdfasdfsdfasdasdfasdfsdf espair.",
+		quote: "asdasdfasdfsdfasda sdfasdfsdfasdasdf asdfsdfasdasdfasdfsdfasd asdfasdfsdf espair.",
 	},
 	{
 		id: "testimonials6",
@@ -121,16 +121,19 @@ export function InfiniteMovingCardsDemo() {
 					Storyteasdfasdfasd asdfasdfasdfds ve been profoundly
 				</Highlight>
 			</p>
-			<InfiniteMovingCards
-				items={testimonials}
-				direction="left"
-				speed="slow"
-			/>
-			<InfiniteMovingCards
-				items={testimonials}
-				direction="left"
-				speed="slow"
-			/>
+            <div className="pt-6">
+                <InfiniteMovingCards
+                    items={testimonials}
+                    direction="left"
+                    speed="slow"
+                />
+                <InfiniteMovingCards
+                    items={testimonials}
+                    direction="left"
+                    speed="slow"
+                    className="mt-4"
+                />
+            </div>
 			<div className="text-xl md:text-2xl mt-12">
 				Stoasdfasdfasdfasdfasdfasdfasd fasdfasdfasd fasdfasdfasdfasdfas
 				dfasdfasdfasdfasdfxcvzasdf asdfasdfasd ofoundly shaped

@@ -1,3 +1,4 @@
+// import { useState, useEffect } from 'react';
 import * as Icon from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import { NavLink } from "react-router-dom";
@@ -5,8 +6,8 @@ import { NavLink } from "react-router-dom";
 // 导航链接数据
 const navLinks = [
 	{ to: "/", label: "Home" },
+	{ to: "/about", label: "about" },
 	{ to: "/other", label: "other" },
-	// { to: "/design", label: "Analytics" },
 	// { to: "/dashboard/settings", label: "Settings" },
 	// { to: "/dashboard/profile", label: "Profile" },
 ];
@@ -17,8 +18,22 @@ function classNameActivew({ isActive }: { isActive: boolean }): string {
 }
 
 export function Header() {
+    // 主题切换
+    // const [isDarMode, setIsDarkMode] = useState(false);
+    
+    // // 设置变化的状态
+    // useEffect(() => {
+    //     const root = document.documentElement as HTMLElement;
+    //     root.className = isDarMode ? "dark" : "light";
+    //     root.style.colorScheme = isDarMode?"dark":"light";
+
+    // }, [isDarMode]);
+    
+    // // 注册点击事件
+    // const toggleTheme = () => setIsDarkMode(!isDarMode);
+
 	return (
-		<header className="fixed top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
+		<header className="sticky top-0 z-40 w-full backdrop-blur flex-none transition-colors duration-500 lg:z-50 lg:border-b lg:border-slate-500/10 dark:border-slate-50/[0.06]">
 			<div className="flex h-14 items-center p-4">
 				<div className="mr-4 hidden md:flex ">
 					<a className="mr-6 flex items-center space-x-2" href="/">

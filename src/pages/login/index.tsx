@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-export function Login() {
+export default function Login() {
 	const navigate = useNavigate();
     const userRef = useRef<HTMLInputElement>(null);
 	const pwdRef = useRef<HTMLInputElement>(null);

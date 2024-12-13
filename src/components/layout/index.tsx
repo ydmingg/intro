@@ -1,15 +1,12 @@
 import { Outlet } from "react-router-dom";
-
 import { Header } from "@/components/header";
-import { BgBall } from "@/components/decorate/bg-ball";
 import { Footer } from "@/components/footer";
 
-export function Layout() {
+export default function Layout() {
 	return (
-		<div className="intro overflow-hidden">
+		<div className="intro">
 			<Header></Header>
-			<BgBall></BgBall>
-			<main className="intro-main w-full">
+            <main className="intro-main w-full overflow-hidden">
 				<Outlet />
 			</main>
 			<Footer></Footer>

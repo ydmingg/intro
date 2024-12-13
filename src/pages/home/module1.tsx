@@ -29,16 +29,19 @@ export function OrbitingCirclesDemo() {
                                 About me:
                             </CardItem>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">00000000000</a>
+                                <a href="">Web Developer</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">111111111111</a>
+                                <a href="">Game Developer</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">22222222222222222</a>
+                                <a href="">Game Critic</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">333333333333333</a>
+                                <a href="">Digital Nomad</a>
+                            </div>
+                            <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
+                                <a href="">Trader</a>
                             </div>
                         </div>
 					</div>

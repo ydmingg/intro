@@ -143,8 +143,8 @@ export function InfiniteMovingCardsDemo() {
 				<div className="flex items-center text-orange-400 font-bold underline gap-1">
 					<LinkPreview
 						url="https://www.bilibili.com/"
-						className="flex align-center w-auto font-bold bg-clip-text gap-1">
-						Discoverasdfasdfasdf asdfa ere
+						className="flex items-center w-auto font-bold bg-clip-text gap-1">
+						Discover my inspirations here
 						<Icon.IconLink stroke="3" />
 					</LinkPreview>
 				</div>

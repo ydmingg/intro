@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export function Other() {
+export default function Other() {
     // 设置根目录
     const baseURL = "http://localhost:3000";
     

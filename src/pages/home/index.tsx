@@ -6,6 +6,7 @@ import { InfiniteMovingCardsDemo } from "./module2";
 import { Module3 } from "./module3";
 import { Module4 } from "./module4";
 import { Module5 } from "./module5";
+import { Module6 } from "./module6";
 
 export default function Home() {
     return (
@@ -22,6 +23,9 @@ export default function Home() {
                 </BlurFade>
                 <BlurFade inView={true} delay={0.4} yOffset={20}>
                     <Module5></Module5>
+                </BlurFade>
+                <BlurFade inView={true} delay={0.4} yOffset={20}>
+                    <Module6></Module6>
                 </BlurFade>
             </main>
             <Footer></Footer>

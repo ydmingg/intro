@@ -31,7 +31,7 @@ export const InfoCard = ({
 	};
 
 	return (
-		<div className="my-auto font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
+		<div className="font-sans accentWhiteBg rounded-xl relative overflow-hidden min-w-[200px] connectivityLink">
 			<motion.div
 				onHoverStart={() => setIsHovered(true)}
 				onHoverEnd={() => setIsHovered(false)}

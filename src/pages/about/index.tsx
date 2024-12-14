@@ -1,6 +1,9 @@
+import { TimelineDemo } from "./module1";
 
 export default function About() { 
     return (
-        <div className="">about</div>
+        <main className="0002">
+            <TimelineDemo></TimelineDemo>
+        </main>
     )
 }

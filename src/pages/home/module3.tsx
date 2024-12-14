@@ -150,10 +150,11 @@ export function Module3() {
 							/>
 						</div>
 						<div className="flex-initial w-full lg:w-1/2 mr-4 xl:mr-6 ml-4 lg:ml-0 mt-8 lg:mt-0">
-							<h3 className="flex align-center text-orange-400 text-4xl xl:text-5xl font-semibold whitespace-nowrap">
+							<h3 className="flex items-center gap-4 text-orange-400 text-4xl xl:text-5xl font-semibold whitespace-nowrap">
 								<Icon.IconBrandChrome
-									size={48}
-									className="svg-inline--fa fa-chrome lg:mr-2 xl:mr-5"
+                                    size={60}
+                                    stroke={3}
+									className="svg-inline--fa fa-chrome"
 								/>
 								Chromium
 							</h3>

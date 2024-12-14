@@ -1,15 +1,17 @@
-import { OrbitingCirclesDemo } from "@/pages/home/module1";
-import { InfiniteMovingCardsDemo } from "@/pages/home/module2";
-import { Module3 } from "@/pages/home/module3";
-import { Module4 } from "@/pages/home/module4";
 import BlurFade from "@/components/ui/blur-fade";
 import { BgBall } from "@/components/decorate/bg-ball";
+import { Footer } from "@/components/footer";
+import { OrbitingCirclesDemo } from "./module1";
+import { InfiniteMovingCardsDemo } from "./module2";
+import { Module3 } from "./module3";
+import { Module4 } from "./module4";
+import { Module5 } from "./module5";
 
 export default function Home() {
     return (
         <>
             <BgBall></BgBall>
-            <div>
+            <main>
                 <OrbitingCirclesDemo></OrbitingCirclesDemo>
                 <InfiniteMovingCardsDemo></InfiniteMovingCardsDemo>
                 <BlurFade inView={true} delay={0.4} yOffset={20}>
@@ -18,7 +20,11 @@ export default function Home() {
                 <BlurFade inView={true} delay={0.4} yOffset={20}>
                     <Module4></Module4>
                 </BlurFade>
-            </div>
+                <BlurFade inView={true} delay={0.4} yOffset={20}>
+                    <Module5></Module5>
+                </BlurFade>
+            </main>
+            <Footer></Footer>
         </>
 	);
 }

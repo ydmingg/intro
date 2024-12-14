@@ -1,24 +1,508 @@
+import * as Icon from "@tabler/icons-react";
+import { InfoCard } from "@/components/card/info";
 
 export function Module4() {
-    return (
-        <section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-52">
-            <div className="flex flex-col lg:flex-row gap-6">
-                <div className="basis-2/3 rounded-3xl accentWhiteBg p-6">
-                    <div className="font-fantasy text-4xl">Time</div>
-                    <p className="mb-4">This is how I spend my time. My biggest hobby is learning, as I am curious about almost everything.</p>
-                    {/* <svg>chart</svg> */}
-                </div>
-                <div className="basis-1/3 flex flex-col gap-4">
-                    <div className="rounded-3xl accentWhiteBg p-6 h-fit">
-                        <div className="font-fantasy text-4xl">sdfsdfs</div> 
-                        <div className="mb-4">This is my travel footprint. And currently I'm living in XiAn, China.</div>
-                        <div className="relative w-fit">
-                            <img width="600" height="586" src="https://www.qzq.at/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Ffootprint.8c66cb7d.jpg&w=640&q=75" className="rounded-3xl shadow-lg border-[1px] border-white/20" />
-                            <span className="bg-slate-100 shadow-md text-slate-700 rounded-full py-2 px-6 slate-900 text-lg font-semibold absolute bottom-4 left-4">XiAn, China</span>
-                        </div>
-                    </div> 
-                </div>
-            </div>
-        </section>
-    );
+	return (
+		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-24 lg:my-52">
+			<ul className="flex gap-4 flex-col">
+				<li className="flex gap-4 flex-wrap lg:flex-nowrap">
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[92%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[70%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[67%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[56%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+				</li>
+				<li className="flex gap-4 flex-wrap lg:flex-nowrap">
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[63%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[60%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[80%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[20%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+				</li>
+				<li className="flex gap-4 flex-wrap lg:flex-nowrap">
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[35%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+					<div className="flex text-orange-400 text-8xl accentDarkBg h-fit m-auto font-semibold p-12 rounded-xl">
+						<span className="relative">
+							S
+							<Icon.IconChevronsUpLeft
+								size={64}
+								stroke={3}
+								className="svg-inline--fa fa-hat-wizard absolute text-orange-400 -rotate-12 -top-[28px] -left-[40px] text-5xl"
+							/>
+						</span>
+						kills
+					</div>
+					<InfoCard
+						overlayTitle="JavaScript"
+						icon={false}
+						overlayDescription={
+							<div className="grid bg-stripes-gray rounded-lg">
+								<div className="px-4 py-2 bg-gray-400 rounded-lg shadow-lg w-[42%]"></div>
+							</div>
+						}
+						infoCardContent={
+							<div>
+								I added features into a giant{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://react.dev/">
+									React
+								</a>{" "}
+								codebase, used NoSQL database (
+								<a
+									target="_blank"
+									rel="external"
+									href="https://learn.microsoft.com/azure/cosmos-db/introduction">
+									Azure CosmosDB
+								</a>
+								) and{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.asp.net/">
+									ASP.NET
+								</a>{" "}
+								for backend, create data visualization based on{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://www.microsoft.com/maps/choose-your-bing-maps-api">
+									Bing Maps
+								</a>
+								, contributed features to{" "}
+								<a
+									target="_blank"
+									rel="external"
+									href="https://github.com/microsoft/fluentui">
+									FluentUI
+								</a>
+							</div>
+						}
+					/>
+				</li>
+			</ul>
+		</section>
+	);
 }

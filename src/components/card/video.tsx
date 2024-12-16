@@ -35,7 +35,7 @@ export const Card = React.memo(
 					ref={videoRef}
 					loop
 					muted={hovered === index ? false : true}
-					className="rounded-xl bg-slate-50 group transition-background duration-[0.5s] shadow-md">
+					className="rounded-xl bg-slate-50 group transition-background shadow-md">
 					<source src={card.src} type="video/mp4" />
 				</video>
 			</div>

@@ -1,11 +1,11 @@
 import { lazy, Suspense } from "react";
 import Home from "@/pages/home";
-import Other from "@/pages/other";
 
 import Loading from '@/components/loading'; 
 
 // 组件懒加载 
 const About = lazy(() => import("@/pages/about"));
+const Other = lazy(() => import("@/pages/other"));
 
 const configRoutesLayoutChild = [
 	{ index: true, element: <Home /> },
@@ -17,7 +17,14 @@ const configRoutesLayoutChild = [
             </Suspense>
         ),
     },
-    { path: "/other", element: <Other /> },
+    {
+        path: "/other",
+        element: (
+            <Suspense fallback={<Loading />}>
+                <Other />
+            </Suspense>
+        )
+    },
 
 ];
 

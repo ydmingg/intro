@@ -16,11 +16,8 @@ export default function Other() {
 		});
     };
     
-   
-
 	return (
 		<div className="py-48 text-center">
-			
 			<div className="flex w-[500px] m-auto gap-2 relative z-1 mb-8">
 				<input
 					className="flex-1 focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none w-full text-sm leading-6 text-slate-900 placeholder-slate-400 rounded-md py-2 px-4 ring-1 ring-slate-200 shadow-sm"
@@ -33,7 +30,6 @@ export default function Other() {
 					className="bg-indigo-600 text-white text-sm leading-6 font-medium py-2 px-3 rounded-lg"
 					onClick={axiosData}>
 					Click Me
-                    
 				</button>
 			</div>
 		</div>

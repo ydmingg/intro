@@ -12,7 +12,11 @@ import '@/assets/styles/index.scss'
 const root = createRoot(document.getElementById('app')!)
 root.render(
     <React.StrictMode>
-        <BrowserRouter >
+        <BrowserRouter 
+            future={{
+                v7_startTransition: true,
+                v7_relativeSplatPath: true,
+            }}>
             <App />
         </BrowserRouter>
     </React.StrictMode>

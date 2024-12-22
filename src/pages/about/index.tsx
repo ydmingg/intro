@@ -1,9 +1,10 @@
 
 
 export default function About() { 
+
     return (
         <main className="relative">
-            gdfsgdfg
+            <div className="">asdfasdfasdf</div>
         </main>
     )
 }

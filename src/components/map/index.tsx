@@ -15,7 +15,7 @@ export function MyMap({ className }: { className: string }) {
 
 			// 关闭tip
 			const tip = mapInstance.getContainer().querySelector(".tdt-bottom");
-			tip.style.display = "none";
+            tip.style.display = "none";
             
 
 		};

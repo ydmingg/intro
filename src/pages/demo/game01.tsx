@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// 创建按钮
 function Square({
 	value,
 	onSquareClick,
@@ -9,37 +8,36 @@ function Square({
 	onSquareClick: () => void;
 }) {
 	return (
-		<button
-			className="square m-1 w-8 h-8 bg-red-500 text-sm"
-			onClick={onSquareClick}>
+		<button className="square w-10 h-10 bg-red-500 m-1" onClick={onSquareClick}>
 			{value}
 		</button>
 	);
 }
 
-// 创建容器
 function Board({
-    xIsNext,
-    squares,
+	xIsNext,
+	squares,
 	onPlay,
 }: {
-    xIsNext: Boolean;
-    squares: string[];
-	onPlay: (nextSquates: string[]) => void;
+	xIsNext: boolean;
+	squares: string[];
+	onPlay: (nextSquares: string[]) => void;
 }) {
+    
 	function handleClick(i: number) {
-		if (squares[i] || calculateWinner(squares)) return;
-		// 复制数组
-		const nextSquates = squares.slice();
-		nextSquates[i] = xIsNext ? "X" : "O";
-        
-		// 更新状态
-        onPlay(nextSquates);
-		
+		if (calculateWinner(squares) || squares[i]) {
+			return;
+		}
+		const nextSquares = squares.slice();
+		if (xIsNext) {
+			nextSquares[i] = "X";
+		} else {
+			nextSquares[i] = "O";
+		}
+		onPlay(nextSquares);
 	}
 
 	const winner = calculateWinner(squares);
-
 	let status;
 	if (winner) {
 		status = "Winner: " + winner;
@@ -50,43 +48,122 @@ function Board({
 	return (
 		<>
 			<div className="status">{status}</div>
-			<div className="board-row flex">
-                <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
-                <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
-                <Square value={squares[2]} onSquareClick={() => handleClick(2)} />
+			<div className="board-row flex w-min">
+				<Square
+					value={squares[0]}
+					onSquareClick={() => handleClick(0)}
+				/>
+				<Square
+					value={squares[1]}
+					onSquareClick={() => handleClick(1)}
+				/>
+				<Square
+					value={squares[2]}
+					onSquareClick={() => handleClick(2)}
+				/>
 			</div>
-			<div className="board-row flex">
-                <Square value={squares[3]} onSquareClick={() => handleClick(3)} />
-                <Square value={squares[4]} onSquareClick={() => handleClick(4)} />
-                <Square value={squares[5]} onSquareClick={() => handleClick(5)} />
+			<div className="board-row flex w-min">
+				<Square
+					value={squares[3]}
+					onSquareClick={() => handleClick(3)}
+				/>
+				<Square
+					value={squares[4]}
+					onSquareClick={() => handleClick(4)}
+				/>
+				<Square
+					value={squares[5]}
+					onSquareClick={() => handleClick(5)}
+				/>
 			</div>
-			<div className="board-row flex">
-                <Square value={squares[6]} onSquareClick={() => handleClick(6)} />
-                <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
-                <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
+			<div className="board-row flex w-min">
+				<Square
+					value={squares[6]}
+					onSquareClick={() => handleClick(6)}
+				/>
+				<Square
+					value={squares[7]}
+					onSquareClick={() => handleClick(7)}
+				/>
+				<Square
+					value={squares[8]}
+					onSquareClick={() => handleClick(8)}
+				/>
 			</div>
-					
 		</>
 	);
 }
 
-// 创建
+export default function Game() {
+	// const [xIsNext, setXIsNext] = useState(true);
+    const [history, setHistory] = useState([Array(9).fill(null)]);
+    const [currentMove, setCurrentMove] = useState(0);
+    const xIsNext = currentMove % 2 === 0;
+    const currentSquares = history[currentMove];
+    
+    // console.log(currentMove % 2);
+    
+
+    // 当前棋盘状态
+	// const currentSquares = history[history.length - 1];
+
+
+    
+    function handlePlay(nextSquares: string[]) {
+        // 记录历史步骤
+        const nextHistory = [...history.slice(0, currentMove + 1), nextSquares]
+        
+        setHistory(nextHistory);
+        setCurrentMove(nextHistory.length - 1);
+        // setXIsNext(!xIsNext);
+
+        
+	}
+
+	function jumpTo(nextMove: number) {
+        setCurrentMove(nextMove);
+        // setXIsNext(nextMove % 2 === 0);
+        console.log(history[currentMove], history[history.length - 1]);
+	}
+
+	const moves = history.map((_, move: number) => {
+		let description;
+		if (move > 0) {
+			description = "Go to move #" + move;
+		} else {
+			description = "Go to game start";
+		}
+		return (
+			<li key={move}>
+				<button onClick={() => jumpTo(move)}>{description}</button>
+			</li>
+		);
+	});
+
+	return (
+		<div className="game">
+			<div className="game-board">
+				<Board
+					xIsNext={xIsNext}
+					squares={currentSquares}
+					onPlay={handlePlay}
+				/>
+			</div>
+			<div className="game-info">
+				<ol>{moves}</ol>
+			</div>
+		</div>
+	);
+}
+
 function calculateWinner(squares: string[]) {
-	const lists = [
-		[0, 1, 2],
-		[3, 4, 5],
-		[6, 7, 8],
-
-		[0, 3, 6],
-		[1, 4, 7],
-		[2, 5, 8],
-
-		[0, 4, 8],
-		[2, 4, 6],
+	const lines = [
+		[0, 1, 2], [3, 4, 5], [6, 7, 8],
+		[0, 3, 6], [1, 4, 7], [2, 5, 8],
+		[0, 4, 8], [2, 4, 6],
 	];
-
-	for (const list of lists) {
-		const [a, b, c] = list;
+	for (let i = 0; i < lines.length; i++) {
+		const [a, b, c] = lines[i];
 		if (
 			squares[a] &&
 			squares[a] === squares[b] &&
@@ -96,27 +173,4 @@ function calculateWinner(squares: string[]) {
 		}
 	}
 	return null;
-}
-
-// 导出组件
-export default function Game() {
-	const [xIsNext, setXIsNext] = useState(true);
-    const [history, setHistory] = useState([Array(9).fill(null)]);
-
-    const currentSquares = history[history.length - 1];
-    
-    
-    function handlePlay(nextSquares: string[]) {
-        // 确保 nextSquares 是一个有效的数组
-        setHistory([...history, nextSquares]);
-        setXIsNext(!xIsNext);
-
-        
-    }
-
-	return (
-		<>
-            <Board xIsNext={xIsNext} squares={ currentSquares } onPlay={ handlePlay } />
-		</>
-	);
 }

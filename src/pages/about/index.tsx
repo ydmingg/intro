@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { MyMap } from "@/components/map";
+// import { useState } from "react";
+// import { MyMap } from "@/components/map";
 import Game from "../demo/game01";
 
 export default function About() {

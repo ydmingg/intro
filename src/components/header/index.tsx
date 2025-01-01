@@ -5,7 +5,8 @@ import { NavLink } from "react-router-dom";
 
 // 导航链接数据
 const navLinks = [
-	{ to: "/", label: "Home" },
+    { to: "/", label: "Home" },
+    { to: "/notes", label: "Notes"},
 	{ to: "/about", label: "about" },
 	{ to: "/other", label: "other" },
 	// { to: "/dashboard/settings", label: "Settings" },

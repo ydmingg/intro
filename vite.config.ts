@@ -10,13 +10,26 @@ const getVersion = version.replace(/\./g, "");
 const getAssetFile = (assetInfo: any) => {
     const name = Array.isArray(assetInfo.names) && assetInfo.names.length > 0 ? assetInfo.names[0] : "unknown";
     const fileType = name.split(".").pop();
-  
-    if (/png|jpe?g|gif|svg|webp/.test(fileType)) {
-      return `assets/images/[name].[ext]`;
-    }
+    // 分类CSS文件
     if (/css/.test(fileType)) {
-      return `assets/styles/[name]-${getVersion}.[ext]`;
+        return `assets/styles/[name]-${getVersion}.[ext]`;
     }
+
+    // 分类图片文件
+    if (/png|jpe?g|gif|svg|webp/.test(fileType)) {
+        return `assets/images/[name].[ext]`;
+    }
+
+    // 分类字体文件
+    if (/woff2?|eot|ttf|otf/.test(fileType)) {
+        return `assets/fonts/[name].[ext]`;
+    }
+    
+    // 分类视频文件
+    if (/mp4|webm|ogg/.test(fileType)) {
+        return `assets/videos/[name].[ext]`;
+    }
+    
     return `assets/[name].[ext]`;
 };
 

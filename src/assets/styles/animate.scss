@@ -1,0 +1,32 @@
+.intro{
+    .new_location_animate {
+        border-radius: 50%;
+        box-shadow: 0 0 0 0 rgba(255, 193, 129, 0);
+        transform: scale(1);
+        animation: new_pulse__animate 2s infinite;
+        -webkit-animation: new_pulse__animate 2s infinite;
+}
+}
+
+
+
+
+
+@keyframes new_pulse__animate {
+    0% {
+        transform: scale(.98);
+        box-shadow: 0 0 0 0 rgba(255, 193, 129, .7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 90px rgba(255, 193, 129, 0);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+}
+    100% {
+        transform: scale(.98);
+        box-shadow: 0 0 0 0 rgba(255, 193, 129, 0);
+    }
+}

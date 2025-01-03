@@ -9,8 +9,8 @@ const navLinks = [
     { to: "/notes", label: "Notes"},
 	{ to: "/about", label: "about" },
 	{ to: "/other", label: "other" },
-	// { to: "/dashboard/settings", label: "Settings" },
-	// { to: "/dashboard/profile", label: "Profile" },
+	{ to: "/dashboard/settings", label: "Settings" },
+	{ to: "/dashboard/profile", label: "Profile" },
 ];
 
 // 导航链接激活状态

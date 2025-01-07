@@ -1,8 +1,9 @@
-// import { useState } from "react";
-// import { MyMap } from "@/components/map";
-import Game from "../demo/game01";
+import { useRef } from "react";
+import Game from "./game01";
 
 export default function About() {
+    const chart2 = useRef<HTMLDivElement>(null)
+
     // 创建
 	return (
 		<main className="relative">
@@ -11,6 +12,8 @@ export default function About() {
             <div className="mt-2">
                 <Game />
             </div>
+
+            <div className="" ref={chart2}></div>
         </main>
 	);
 }

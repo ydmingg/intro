@@ -8,6 +8,7 @@ export function Module6() {
                     <div className="font-fantasy text-4xl">Time</div>
                     <p className="mt-1 mb-4">This is how I spend my time. My biggest hobby is learning, as I am curious about almost everything.</p>
                     {/* <svg>chart</svg> */}
+                    
                 </div>
                 <div className="basis-1/3 flex flex-col gap-4">
                     <div className="rounded-3xl accentWhiteBg p-6 h-fit">

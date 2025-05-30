@@ -3,7 +3,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FlipWords } from "@/components/ui/flip-words.tsx";
 
 export function OrbitingCirclesDemo() {
-    const words = ["xiaoheizhu", "cute", "beautiful", "bingbing"];
+    const words = ["YDMING", "Graceful", "Creative", "BingBing"];
 
 	return (
 		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
@@ -29,19 +29,19 @@ export function OrbitingCirclesDemo() {
                                 About me:
                             </CardItem>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">Web Developer</a>
+                                <a href="">Web Design</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">Game Developer</a>
+                                <a href="">Mobile Design</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">Game Critic</a>
+                                <a href="">Big Screen Design</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
                                 <a href="">Digital Nomad</a>
                             </div>
                             <div className="text-slate-400 hover:text-slate-800 hover:translate-x-1 transition py-[2px] cursor-pointer">
-                                <a href="">Trader</a>
+                                <a href="">Other</a>
                             </div>
                         </div>
 					</div>

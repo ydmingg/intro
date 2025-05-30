@@ -38,7 +38,7 @@ export function MyMap({
 			<div
 				id="my-map"
 				ref={mapContainerRef}
-				className={cn("my-map relative before:absolute before:w-full before:h-full", className)}></div>
+				className={cn("my-map relative ", className)}></div>
 			<p className={cn("relative", childrenClassName)}>{children}</p>
 			<img
                 alt="hero icon"

@@ -17,21 +17,6 @@ export function MyMap({
 
 	useEffect(() => {
 		if (!mapContainerRef.current) return;
-
-		// const loadMap = () => {
-		// 	// 创建地图容器
-		// 	map = new T.Map(mapContainerRef.current);
-		// 	// 配置地图
-		// 	map.centerAndZoom(new T.LngLat(107.40769, 33.89945), zoom); // 必选：设置地图中心点及缩放级别
-		// 	map.disableScrollWheelZoom(); // 可选：移除缩放控件
-		// 	map.disablePinchToZoom(); // 可选：移除单击控件
-		// 	map.disableDoubleClickZoom(); // 可选：移除双击控件
-        //     map.removeControl(new T.Control.Zoom()); // 可选：移除缩放控件
-        //     // 禁止地图拖动
-        //     // map.draggable();
-		// };
-
-        // loadMap();
         
         map = new T.Map(mapContainerRef.current, {
             center: new T.LngLat(107.40769, 33.89945),
@@ -51,9 +36,9 @@ export function MyMap({
 	return (
 		<>
 			<div
-				id="afds"
+				id="my-map"
 				ref={mapContainerRef}
-				className={cn("relative", className)}></div>
+				className={cn("my-map relative before:absolute before:w-full before:h-full", className)}></div>
 			<p className={cn("relative", childrenClassName)}>{children}</p>
 			<img
                 alt="hero icon"

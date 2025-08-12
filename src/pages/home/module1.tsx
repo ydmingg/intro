@@ -3,7 +3,7 @@ import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import { FlipWords } from "@/components/ui/flip-words.tsx";
 
 export function OrbitingCirclesDemo() {
-    const words = ["YDMING", "Graceful", "Creative", "BingBing"];
+    const words = ["YdmingGG", "Graceful", "Creative", "BingBing"];
 
 	return (
 		<section className="w-full px-4 lg:px-16 xl:px-32 2xl:px-44 relative z-10 my-12 md:mt-40 md:mb-12 py-24 flex flex-wrap-reverse md:flex-nowrap justify-items-center justify-around items-center gap-16">
